@@ -270,15 +270,18 @@ def plot_montage_grey(
     print("the index_skip is:", index_skip)
     print()
     #This displays 16 slices that are evenly spaced out across the range of slices that pass the threshold, which is good for visualizing a representative sample of slices, but may miss some important slices if there are more than 16 that pass the threshold. The make_full_montage function will display all slices that pass the threshold, which is good for visualizing the full distribution of slices, but may be too much for some cases.
-    '''
+    
     montage = make_montage(
         image[:, :, index_start:index_end:index_skip, :], n_slices=16
     )
-    '''
+    
+
     #This displays all the slices that pass the threshold, which is good for visualizing the full distribution of slices, but may be too much for some cases. The make_montage function will only display 16 slices, which may be more manageable for some cases, but may miss some important slices if there are more than 16 that pass the threshold.
+    '''
     montage = make_full_montage(
         image[:, :, index_start:index_end, :], n_slices=16
     )
+    '''
     #This displays all slices, irregardless of the threshold, which may be too much for some cases, but may be good for visualizing the full distribution of slices. The make_montage function will only display 16 slices, which may be more manageable for some cases, but may miss some important slices if there are more than 16 that pass the threshold.
     '''
     montage = make_full_montage(
@@ -319,15 +322,17 @@ def plot_montage_color(
     # plot the montage
     index_end = index_start + index_skip * n_slices
     #This displays 16 slices that are evenly spaced out across the range of slices that pass the threshold, which is good for visualizing a representative sample of slices, but may miss some important slices if there are more than 16 that pass the threshold. The make_full_montage function will display all slices that pass the threshold, which is good for visualizing the full distribution of slices, but may be too much for some cases.
-    '''
+    
     montage = make_montage(
         image[:, :, index_start:index_end:index_skip, :], n_slices=n_slices
     )
-    '''
+    
     #This displays all the slices that pass the threshold, which is good for visualizing the full distribution of slices, but may be too much for some cases. The make_montage function will only display 16 slices, which may be more manageable for some cases, but may miss some important slices if there are more than 16 that pass the threshold.
+    '''
     montage = make_full_montage(
         image[:, :, index_start:index_end, :], n_slices=16
     )
+    '''
     #This displays all slices, irregardless of the threshold, which may be too much for some cases, but may be good for visualizing the full distribution of slices. The make_montage function will only display 16 slices, which may be more manageable for some cases, but may miss some important slices if there are more than 16 that pass the threshold.
     '''
     montage = make_full_montage(
