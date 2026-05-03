@@ -21,9 +21,11 @@ Follow the environment setup instructions from the [Duke repository README](http
 > ⚠️ Complete the steps **in the described order** and follow the instructions appropriate for your operating system (macOS, Windows via WSL, or Linux).
 
 To streamline steps 2.2 and 2.3 of the installation process, run the provided setup script:
-
 ```bash
-bash .setup.sh
+chmod u+x ./setup.sh
+```
+```bash
+./setup.sh 2>&1 | tee setup.log
 ```
 
 If the script fails, manual installation instructions are available at the bottom of the Duke repository README.
